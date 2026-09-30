@@ -1,0 +1,53 @@
+<testsuite failures="0" name="com/api/automation/deleterequest/deleteJobRequest.feature" skipped="0" tests="2" time="1.234899">
+  <testcase classname="com.api.automation.deleterequest.deleteJobRequest" name="To delete the job entry" time="0.604023">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+* def getRandomValue = function() {return Math.floor((100) * Math.random());} . passed
+* def createJobId = getRandomValue() ...................................... passed
+* def creatJob = call read("../createJobEntryWithVariables.feature") {_url:'http://localhost:9897',_path:'/normal/webapi/add',_id:'#(createJobId)'} . passed
+Given path '/normal/webapi/remove/' + createJobId ......................... passed
+And headers {Accept:'application/json'} ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:'#(createJobId)',jobTitle:'Software Engg - 2'} ............. passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.deleterequest.deleteJobRequest" name="To demo request chaining" time="0.630876">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+* def getRandomValue = function() {return Math.floor((100) * Math.random());} . passed
+* def createJobId = getRandomValue() ...................................... passed
+* def creatJob = call read("../createJobEntryWithVariables.feature") {_url:'http://localhost:9897',_path:'/normal/webapi/add',_id:'#(createJobId)'} . passed
+Given path '/normal/webapi/remove/' + createJobId ......................... passed
+And headers {Accept:'application/json'} ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:'#(createJobId)',jobTitle:'Software Engg - 2'} ............. passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+* def getRandomValue = function() {return Math.floor((100) * Math.random());} . passed
+* def createJobId = getRandomValue() ...................................... passed
+* def createJob = call read("../createJobEntryWithVariables.feature") {_url:'http://localhost:9897',_path:'/normal/webapi/add',_id:'#(createJobId)'} . passed
+* def jobId = createJob.responseJobId ..................................... passed
+* def jobTitle = createJob.responseJobTitle ............................... passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+Given path '/normal/webapi/update/details' ................................ passed
+And params {id:'#(jobId)',jobTitle:'#(jobTitle)',jobDescription:'#(jobDes)'} . passed
+And header Accept = 'application/json' .................................... passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+* def jobId = response.jobId .............................................. passed
+* def jobTitle = response.jobTitle ........................................ passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:'#(jobId)',jobTitle:'#(jobTitle)'} ......................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDes ............................... passed</system-out>
+  </testcase>
+</testsuite>

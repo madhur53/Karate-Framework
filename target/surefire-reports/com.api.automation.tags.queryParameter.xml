@@ -1,0 +1,20 @@
+<testsuite failures="1" name="com/api/automation/tags/queryParameter.feature" skipped="0" tests="1" time="0.007274">
+  <testcase classname="com.api.automation.tags.queryParameter" name="To get the data using Query Parameter" time="0.007274">
+    <failure message="queryParameter.feature:13 - evaluation (js) failed: read(&quot;../../createJobEntryWithVariables.feature&quot;), java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\MadhurChaudhari\eclipse-workspace-1\karateframework\target\test-classes\com\api\automation\tags\..\..\createJobEntryWithVariables.feature (The system cannot find the file specified)&#10;stack trace: com.intuit.karate.Resource.getStream(Resource.java:135)">Given url 'http://localhost:9897' ......................................... passed
+* def getRandomValue = function() {return Math.floor((100) * Math.random());} . passed
+* def createJobId = getRandomValue() ...................................... passed
+* def createJob = call read("../../createJobEntryWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(createJobId)'} . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: queryParameter.feature:13 - evaluation (js) failed: read("../../createJobEntryWithVariables.feature"), java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\MadhurChaudhari\eclipse-workspace-1\karateframework\target\test-classes\com\api\automation\tags\..\..\createJobEntryWithVariables.feature (The system cannot find the file specified)
+stack trace: com.intuit.karate.Resource.getStream(Resource.java:135)&#13;
+	at ✽.* def createJob = call read("../../createJobEntryWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(createJobId)'} (queryParameter.feature:13)&#13;
+
+Given path '/normal/webapi/find' .......................................... skipped
+And params {id:'#(createJobId)', jobTitle:'Software Engg - 2'} ............ skipped
+And headers {Accept:'application/json'} ................................... skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.jobId == createJobId ................................... skipped</failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.api.automation.ParallelBuilderWithCucumberReport
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.273 s <<< FAILURE! - in com.api.automation.ParallelBuilderWithCucumberReport
+executeKarateTest  Time elapsed: 0.265 s  <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at com.api.automation.ParallelBuilderWithCucumberReport.executeKarateTest(ParallelBuilderWithCucumberReport.java:25)
+Caused by: java.lang.NullPointerException: Cannot invoke "javax.script.ScriptEngine.createBindings()" because "com.intuit.karate.ScriptBindings.NASHORN" is null
+	at com.api.automation.ParallelBuilderWithCucumberReport.executeKarateTest(ParallelBuilderWithCucumberReport.java:25)
+

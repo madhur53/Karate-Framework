@@ -1,0 +1,14 @@
+<testsuite failures="0" name="com/api/automation/getrequest/jsonPathExpression.feature" skipped="0" tests="1" time="0.085939">
+  <testcase classname="com.api.automation.getrequest.jsonPathExpression" name="To get the value of property using json path expression" time="0.085939">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def jobTitle = karate.jsonPath(response,"$[?(@.jobId==1)].jobTitle") .... passed
+* def jobDescription = karate.jsonPath(response,"$[?(@.jobId == 1)].jobDescription") . passed
+* def experience = karate.jsonPath(response,"$[?(@.jobId == 1)].experience") . passed
+And print "Job Title ==&gt; ", jobTitle ...................................... passed
+And print "Job Description ==&gt; ", jobDescription .......................... passed
+And print "Experience ==&gt; ", experience ................................... passed</system-out>
+  </testcase>
+</testsuite>

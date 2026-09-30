@@ -1,0 +1,16 @@
+<testsuite failures="0" name="com/api/automation/tags/updateJobDescription.feature" skipped="0" tests="1" time="0.037911">
+  <testcase classname="com.api.automation.tags.updateJobDescription" name="To update the job description for newly added job entry" time="0.037911">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+* def getRandomValue = function() {return Math.floor((100) * Math.random());} . passed
+* def createJobId = getRandomValue() ...................................... passed
+* def creatJob = call read("../createJobEntryWithVariables.feature") {_url:'http://localhost:9897',_path:'/normal/webapi/add',_id:'#(createJobId)'} . passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+Given path '/normal/webapi/update/details' ................................ passed
+And params {id:'#(createJobId)',jobTitle:'Software Engg - 2',jobDescription:'#(jobDes)'} . passed
+And header Accept = 'application/json' .................................... passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDes ............................... passed</system-out>
+  </testcase>
+</testsuite>

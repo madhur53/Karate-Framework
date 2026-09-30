@@ -1,0 +1,33 @@
+<testsuite failures="0" name="com/api/automation/getrequest/Variables.feature" skipped="0" tests="2" time="0.041909">
+  <testcase classname="com.api.automation.getrequest.Variables" name="To create a variable" time="0.026198">
+    <system-out>* def app_name = "Google" ................................................. passed
+* def page_load_timeout = 20 .............................................. passed
+Given def var_int = 10 .................................................... passed
+And def var_string = "Karate" ............................................. passed
+Then print "Int Variable ==&gt; ", var_int ................................... passed
+And print "String Variable ==&gt; ", var_string .............................. passed
+* def var_int_2 = var_int + 10 ............................................ passed
+And print "New Variable ==&gt; ", var_int_2 .................................. passed
+And print "Background Section Variable ==&gt; ", app_name, page_load_timeout . passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.Variables" name="Access the Variable" time="0.01571">
+    <system-out>* def app_name = "Google" ................................................. passed
+* def page_load_timeout = 20 .............................................. passed
+Given def var_int = 10 .................................................... passed
+And def var_string = "Karate" ............................................. passed
+Then print "Int Variable ==&gt; ", var_int ................................... passed
+And print "String Variable ==&gt; ", var_string .............................. passed
+* def var_int_2 = var_int + 10 ............................................ passed
+And print "New Variable ==&gt; ", var_int_2 .................................. passed
+And print "Background Section Variable ==&gt; ", app_name, page_load_timeout . passed
+* def app_name = "Google" ................................................. passed
+* def page_load_timeout = 20 .............................................. passed
+* def var_int = 1 ......................................................... passed
+* def var_string = "New" .................................................. passed
+* def var_int_2 = var_int + 90 ............................................ passed
+Given print "Previous Scenario ==&gt; ", var_int ............................. passed
+And print "Previous Scenario ==&gt; ", var_string ............................ passed
+And print "Previous Scenario ==&gt; ", var_int_2 ............................. passed
+And print "Background Section Variable ==&gt; ", app_name, page_load_timeout . passed</system-out>
+  </testcase>
+</testsuite>

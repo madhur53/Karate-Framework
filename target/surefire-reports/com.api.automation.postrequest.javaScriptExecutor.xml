@@ -1,0 +1,10 @@
+<testsuite failures="0" name="com/api/automation/postrequest/javaScriptExecutor.feature" skipped="0" tests="1" time="0.024388">
+  <testcase classname="com.api.automation.postrequest.javaScriptExecutor" name="Execute Java Script Function with and without parameter" time="0.024388">
+    <system-out>* def getIntValue = function() { return 10;} .............................. passed
+Then print "Function Value =&gt; ", getIntValue() ............................ passed
+* def getRandomValue = function() {return Math.floor((100) * Math.random());} . passed
+Then print "Function Value =&gt; ", getRandomValue() ......................... passed
+* def getStringValue = function(arg1) {return "Hello " + arg1;} ........... passed
+Then print "Function Value =&gt; ", getStringValue("World") .................. passed</system-out>
+  </testcase>
+</testsuite>

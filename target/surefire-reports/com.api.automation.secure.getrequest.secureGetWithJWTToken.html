@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>com.api.automation.secure.getrequest.secureGetWithJWTToken</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">2</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2026-09-23 04:47:49 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1:4]">[1:4] Send the GET request with JWT token </a>
+                    </div>
+                    <div class="nav-item passed">
+                        <a href="#[2:11]">[2:11] Send the GET request without JWT token </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">com/api/automation/secure/getrequest/secureGetWithJWTToken.feature</span><span class="feature-description">To send the get request with JWT token | GET https://jobapplicationjwt.herokuapp.com/auth/webapi/all</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:4]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:4]</span><span class="scenario-name">Send the GET request with JWT token </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 1190</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="1">
+                            <div class="step-ref passed">1</div>
+                            <div class="step-cell passed">* def token = call read('../../getToken.feature') {username: 'emilys', password: 'emilyspass'}</div>
+                        </div>
+                        <div class="time-cell passed">722</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="1.1">
+                            <div class="step-ref passed">&gt;&gt;</div>
+                            <div class="step-cell passed">com/api/automation/getToken.feature</div>
+                        </div>
+                        <div class="time-cell passed">705</div>
+                    </div>
+                    <div class="callarg-container" data-parent="1.1">
+                        <div class="step-ref"> </div>
+                        <div class="preformatted">{
+  "username": "emilys",
+  "password": "emilyspass"
+}
+</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell comment"># Register the User</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell comment">#Given url 'https://jobapplicationjwt.herokuapp.com/users/sign-up'</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell comment">#And headers {Accept:'application/json', Content-Type:'application/json'}</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell comment">#And request { username: '#(username)', password: '#(password)' }</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell comment">#When method post</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell comment">#Then status 200</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell comment"># Get the Token</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="2">
+                            <div class="step-ref passed">2</div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell passed">Given url 'https://dummyjson.com/auth/login'</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="preformatted" data-parent="2">16:47:48.119 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell passed">And headers {Accept:'application/json', Content-Type:'application/json'}</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell passed">And request { username: '#(username)', password: '#(password)' }</div>
+                        </div>
+                        <div class="time-cell passed">6</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell passed">When method post</div>
+                        </div>
+                        <div class="time-cell passed">685</div>
+                    </div>
+                    <div class="preformatted" data-parent="5">16:47:48.150 request:
+1 &gt; POST https://dummyjson.com/auth/login
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 45
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: dummyjson.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.7)
+{"username":"emilys","password":"emilyspass"}
+
+16:47:48.829 response time in milliseconds: 676.86
+1 &lt; 200
+1 &lt; CF-RAY: a3f92523cb2cf8f4-SIN
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 23 Sep 2026 11:17:48 GMT
+1 &lt; Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 &lt; Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=1h2VDgdla%2Be5iLAvvKgs5WYEEzJATRLPzTVB2tdzStKszy0uGdZEtrLHi6ROfo5a9Uy3pUvJV8WakUgz61JjpvGUf2LBvKbXWrLSanU362dSQgFlraJsFfH%2FEgvp0BoK"}]}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: [accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3OTAxNjIyNjgsImV4cCI6MTc5MDE2NTg2OH0.2OEr5_RKAWxE8DW7FBI5CCryTGAZjSG4sskv17Tmznc; Max-Age=3600; Path=/; Expires=Wed, 23 Sep 2026 12:17:48 GMT; HttpOnly; Secure, refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3OTAxNjIyNjgsImV4cCI6MTc5Mjc1NDI2OH0.1H8Qaq-cCDbRryFHWKD1EjftODrCU7pizK9hjWWVUgk; Max-Age=3600; Path=/; Expires=Wed, 23 Sep 2026 12:17:48 GMT; HttpOnly; Secure]
+1 &lt; Transfer-Encoding: chunked
+1 &lt; access-control-allow-credentials: true
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; etag: W/"3a2-h7jwbepKoFboWCNpgwCVZmwEbV0"
+1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
+1 &lt; vary: Origin, Accept-Encoding
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-dns-prefetch-control: off
+1 &lt; x-download-options: noopen
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; x-ratelimit-limit: 100
+1 &lt; x-ratelimit-remaining: 98
+1 &lt; x-ratelimit-reset: 1790162274
+1 &lt; x-xss-protection: 1; mode=block
+{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3OTAxNjIyNjgsImV4cCI6MTc5MDE2NTg2OH0.2OEr5_RKAWxE8DW7FBI5CCryTGAZjSG4sskv17Tmznc","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3OTAxNjIyNjgsImV4cCI6MTc5Mjc1NDI2OH0.1H8Qaq-cCDbRryFHWKD1EjftODrCU7pizK9hjWWVUgk","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
+                            <div class="step-indent"> </div>
+                            <div class="step-cell passed">* def authToken = response.accessToken</div>
+                        </div>
+                        <div class="time-cell passed">10</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
+                            <div class="step-cell passed">Given url 'https://dummyjson.com/auth/me'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">And headers {Accept:'application/json',Authorization:'#("Bearer " + token.authToken)'}</div>
+                        </div>
+                        <div class="time-cell passed">9</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="10">
+                            <div class="step-ref passed">10</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">456</div>
+                    </div>
+                    <div class="preformatted" data-parent="10">16:47:48.855 request:
+1 &gt; GET https://dummyjson.com/auth/me
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3OTAxNjIyNjgsImV4cCI6MTc5MDE2NTg2OH0.2OEr5_RKAWxE8DW7FBI5CCryTGAZjSG4sskv17Tmznc
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: dummyjson.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.7)
+
+16:47:49.309 response time in milliseconds: 451.30
+1 &lt; 200
+1 &lt; CF-RAY: a3f92526cdacfd13-SIN
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 23 Sep 2026 11:17:49 GMT
+1 &lt; Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 &lt; Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=4VSRhoKpVbzi6hF5wX3AgYvWhdg80IgbmaSEzn86m2t640z8Qdpe6q%2FOOyXKgTSz1JZJ%2FGvUx8VzT9MgzNwxnOYmKC2Qsd5vq35lbjyPQe8lSe6NGgebb9VhjnS%2FNBs%2F"}]}
+1 &lt; Server: cloudflare
+1 &lt; Transfer-Encoding: chunked
+1 &lt; access-control-allow-credentials: true
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; etag: W/"58f-CoL/KoXlW3x1PtqQr3wqPsXj6DE"
+1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
+1 &lt; vary: Origin, Accept-Encoding
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-dns-prefetch-control: off
+1 &lt; x-download-options: noopen
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; x-ratelimit-limit: 100
+1 &lt; x-ratelimit-remaining: 99
+1 &lt; x-ratelimit-reset: 1790162274
+1 &lt; x-xss-protection: 1; mode=block
+{"id":1,"firstName":"Emily","lastName":"Johnson","maidenName":"Smith","age":29,"gender":"female","email":"emily.johnson@x.dummyjson.com","phone":"+81 965-431-3024","username":"emilys","password":"emilyspass","birthDate":"1996-5-30","image":"https://dummyjson.com/icon/emilys/128","bloodGroup":"O-","height":193.24,"weight":63.16,"eyeColor":"Green","hair":{"color":"Brown","type":"Curly"},"ip":"42.48.100.32","address":{"address":"626 Main Street","city":"Phoenix","state":"Mississippi","stateCode":"MS","postalCode":"29112","coordinates":{"lat":-77.16213,"lng":-92.084824},"country":"United States"},"macAddress":"47:fa:41:18:ec:eb","university":"University of Wisconsin--Madison","bank":{"cardExpire":"05/28","cardNumber":"3693233511855044","cardType":"Diners Club International","currency":"GBP","iban":"GB74MH2UZLR9TRPHYNU8F8"},"company":{"department":"Engineering","name":"Dooley, Kozey and Cronin","title":"Sales Manager","address":{"address":"263 Tenth Street","city":"San Francisco","state":"Wisconsin","stateCode":"WI","postalCode":"37657","coordinates":{"lat":71.814525,"lng":-161.150263},"country":"United States"}},"ein":"977-175","ssn":"900-590-289","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36","crypto":{"coin":"Bitcoin","wallet":"0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a","network":"Ethereum (ERC20)"},"role":"admin"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref passed">11</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[2:11]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [2:11]</span><span class="scenario-name">Send the GET request without JWT token </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 477</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="12">
+                            <div class="step-ref passed">12</div>
+                            <div class="step-cell passed">Given url 'https://dummyjson.com/auth/me'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="12">16:47:49.343 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container" id="13">
+                            <div class="step-ref passed">13</div>
+                            <div class="step-cell passed">And headers {Accept:'application/json'}</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="14">
+                            <div class="step-ref passed">14</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">477</div>
+                    </div>
+                    <div class="preformatted" data-parent="14">16:47:49.348 request:
+1 &gt; GET https://dummyjson.com/auth/me
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: dummyjson.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.7)
+
+16:47:49.821 response time in milliseconds: 471.11
+1 &lt; 401
+1 &lt; CF-RAY: a3f92529d814ce6e-SIN
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 38
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 23 Sep 2026 11:17:49 GMT
+1 &lt; Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 &lt; Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=HmqrpJXtgjtsxvxfboV4z26c%2BQUPKQw6UV0q%2B%2Bl%2B2%2BZkJnblrINq9MjzsoyzqW9ALh0Cdg9QXPwTpZ%2FQVtEXCfM4znRUPIqSz0r7hvsRPbfJvBD8s4YpzE%2FcVX1zyHx3"}]}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: [accessToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT, refreshToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT]
+1 &lt; access-control-allow-credentials: true
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; etag: W/"26-TtDLQtfPAa5hR/eRnAb5xDEDYiA"
+1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
+1 &lt; vary: Origin, Accept-Encoding
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-dns-prefetch-control: off
+1 &lt; x-download-options: noopen
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; x-ratelimit-limit: 100
+1 &lt; x-ratelimit-remaining: 99
+1 &lt; x-ratelimit-reset: 1790162274
+1 &lt; x-xss-protection: 1; mode=block
+{"message":"Access Token is required"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="15">
+                            <div class="step-ref passed">15</div>
+                            <div class="step-cell passed">Then status 401</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>

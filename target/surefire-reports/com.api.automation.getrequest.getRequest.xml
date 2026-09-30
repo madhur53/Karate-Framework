@@ -1,0 +1,41 @@
+<testsuite failures="0" name="com/api/automation/getrequest/getRequest.feature" skipped="0" tests="3" time="1.068377">
+  <testcase classname="com.api.automation.getrequest.getRequest" name="To get all the data from application in JSON format" time="0.509999">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print '======== This is Background Keyword ========' .................. passed
+Given path '/normal/webapi/all' ........................................... passed
+When method get # Send the get request .................................... passed
+Then status 200 # the status code response should be 200 .................. passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequest" name="To get all the data from application in JSON format using path variable" time="0.511853">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print '======== This is Background Keyword ========' .................. passed
+Given path '/normal/webapi/all' ........................................... passed
+When method get # Send the get request .................................... passed
+Then status 200 # the status code response should be 200 .................. passed
+Given url 'http://localhost:9897' ......................................... passed
+And print '======== This is Background Keyword ========' .................. passed
+And path '/normal/webapi/all' ............................................. passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequest" name="To get all the data from application in xml format using path varaible" time="0.046524">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print '======== This is Background Keyword ========' .................. passed
+Given path '/normal/webapi/all' ........................................... passed
+When method get # Send the get request .................................... passed
+Then status 200 # the status code response should be 200 .................. passed
+Given url 'http://localhost:9897' ......................................... passed
+And print '======== This is Background Keyword ========' .................. passed
+And path '/normal/webapi/all' ............................................. passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And print '======== This is Background Keyword ========' .................. passed
+And path '/normal/webapi/all' ............................................. passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,57 @@
+<testsuite failures="1" name="com/api/automation/getrequest/validateJSONArray.feature" skipped="0" tests="2" time="0.068154">
+  <testcase classname="com.api.automation.getrequest.validateJSONArray" name="To get the data in JSON format" time="0.025397">
+    <failure message="validateJSONArray.feature:12 - path: $.[0].jobId, actual: 77, expected: 1, reason: not equal (Integer)">Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.[0].jobId == 1 ......................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateJSONArray.feature:12 - path: $.[0].jobId, actual: 77, expected: 1, reason: not equal (Integer)&#13;
+	at ✽.And match response.[0].jobId == 1 (validateJSONArray.feature:12)&#13;
+
+And match response.[0].experience[1] == 'Apple' ........................... skipped
+And match response.[0].project[0].projectName == 'Movie App' .............. skipped
+And match response.[0].project[0].technology[2] == 'Gradle' ............... skipped
+And match response.[0].experience == '#[3]' ............................... skipped
+And match response.[0].project[0].technology == '#[3]' .................... skipped
+And match response.[0].experience[*] == ['Google', 'Apple', 'Mobile Iron'] . skipped
+And match response.[0].project[0].technology[*] == ['Kotlin','SQL Lite','Gradle'] . skipped
+And match response.[0].experience[*] contains ['Mobile Iron', 'Apple'] .... skipped
+And match response.[*].jobId contains 1 ................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.validateJSONArray" name="To get the data in JSON format and validate using fuzzy matcher" time="0.042757">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.[0].jobId == 1 ......................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateJSONArray.feature:12 - path: $.[0].jobId, actual: 77, expected: 1, reason: not equal (Integer)&#13;
+	at ✽.And match response.[0].jobId == 1 (validateJSONArray.feature:12)&#13;
+
+And match response.[0].experience[1] == 'Apple' ........................... skipped
+And match response.[0].project[0].projectName == 'Movie App' .............. skipped
+And match response.[0].project[0].technology[2] == 'Gradle' ............... skipped
+And match response.[0].experience == '#[3]' ............................... skipped
+And match response.[0].project[0].technology == '#[3]' .................... skipped
+And match response.[0].experience[*] == ['Google', 'Apple', 'Mobile Iron'] . skipped
+And match response.[0].project[0].technology[*] == ['Kotlin','SQL Lite','Gradle'] . skipped
+And match response.[0].experience[*] contains ['Mobile Iron', 'Apple'] .... skipped
+And match response.[*].jobId contains 1 ................................... skipped
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.[0].jobId == '#present' ................................ passed
+And match response.[0].experience[1] == '#notnull' ........................ passed
+And match response.[0].project[0].projectName == '#ignore' ................ passed
+And match response.[0].project[0].technology == '#array' .................. passed
+And match response.[0].jobTitle == '#string' .............................. passed
+And match response.[0].jobId == '#number' ................................. passed</system-out>
+  </testcase>
+</testsuite>

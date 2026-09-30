@@ -1,0 +1,21 @@
+<testsuite failures="1" name="com/api/automation/createJobEntryWithVariables.feature" skipped="0" tests="1" time="0.009636">
+  <testcase classname="com.api.automation.createJobEntryWithVariables" name="To create the Job Entry with JSON data" time="0.009636">
+    <failure message="createJobEntryWithVariables.feature:5 - evaluation (js) failed: _url, javax.script.ScriptException: ReferenceError: &quot;_url&quot; is not defined in &lt;eval&gt; at line number 1&#10;stack trace: jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:477)">Given url _url ............................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntryWithVariables.feature:5 - evaluation (js) failed: _url, javax.script.ScriptException: ReferenceError: "_url" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:477)&#13;
+	at ✽.Given url _url (createJobEntryWithVariables.feature:5)&#13;
+
+And path _path ............................................................ skipped
+And print "Helper ==&gt; ", _url ............................................. skipped
+And print "Helper ==&gt; ", _path ............................................ skipped
+And print "Helper ==&gt; ", _id .............................................. skipped
+And request { "jobId": '#(_id)',"jobTitle": "Software Engg - 2", "jobDescription": "To develop andriod application", "experience": ["Google","Apple","Mobile Iron"],"project": [{"projectName": "Movie App","technology": ["Kotlin","SQL Lite","Gradle"]}]} . skipped
+And headers {Accept: 'application/json', Content-Type: 'application/json'} . skipped
+When method post .......................................................... skipped
+And status 201 ............................................................ skipped
+* def responseJobId = response.jobId ...................................... skipped
+* def responseJobTitle = response.jobTitle ................................ skipped</failure>
+  </testcase>
+</testsuite>

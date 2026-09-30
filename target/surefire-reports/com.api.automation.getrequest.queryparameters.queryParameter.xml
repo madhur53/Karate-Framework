@@ -1,0 +1,14 @@
+<testsuite failures="0" name="com/api/automation/getrequest/queryparameters/queryParameter.feature" skipped="0" tests="1" time="0.087409">
+  <testcase classname="com.api.automation.getrequest.queryparameters.queryParameter" name="To get the data using Query Parameter" time="0.087409">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+* def getRandomValue = function() {return Math.floor((100) * Math.random());} . passed
+* def createJobId = getRandomValue() ...................................... passed
+* def createJob = call read("../../createJobEntryWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(createJobId)'} . passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:'#(createJobId)', jobTitle:'Software Engg - 2'} ............ passed
+And headers {Accept:'application/json'} ................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobId == createJobId ................................... passed</system-out>
+  </testcase>
+</testsuite>
