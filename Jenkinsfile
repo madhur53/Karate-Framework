@@ -4,7 +4,7 @@ pipeline{
         jdk 'JDK 11'
     }
     
-    parameters { choice(name: 'Environment, choices: ['staging', 'preprod', 'prod'], description: 'Profile needs to be used while executing test') }
+    parameters { choice(name: 'Environment', choices: ['staging', 'preprod', 'prod'], description: 'Profile needs to be used while executing test') }
     
     stages {
         stage ('CleanUp Stage'){
@@ -43,7 +43,7 @@ pipeline{
                 bat 'java -version'
                 bat 'mvn -version'
             	bat 'mvn -P %Environment% test'
-               	bat 'mvn test'
+               	//bat 'mvn test'
                 //bat 'echo Test Execution Completed'
             }
         }
